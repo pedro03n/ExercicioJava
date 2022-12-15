@@ -1,0 +1,27 @@
+package lista_de_exercicio;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Ex002 {
+
+	public static void main(String[] args) {
+		 Locale.setDefault(Locale.US);
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.println("Insira um número: ");
+		 int numero = sc.nextInt();
+		 
+		 if((numero %2 ==0)) {
+			 System.out.println("Número divisivel por 2");
+		 }else if(numero %5 ==0) {
+			 System.out.println("Número divisivel por 5");
+		 }else if(numero %10 ==0) {
+			 System.out.println("Número divisivel por 10");
+		 }else {
+			 System.out.println("Não é divisível por nenhum deles");
+		 }
+		 sc.close();
+	}
+
+}

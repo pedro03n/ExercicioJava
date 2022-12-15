@@ -1,0 +1,20 @@
+package lista_de_exercicio;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Ex009 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Informe seu salario: ");
+		double salario = sc.nextDouble();
+		
+		double diferencialSalario = salario / 1.212 ;
+		System.out.println("A quantidade de salarios em relação ao salario minimo é de: "+diferencialSalario+" salario minimo");
+		sc.close();
+	}
+
+}
