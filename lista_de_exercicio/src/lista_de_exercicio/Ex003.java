@@ -8,24 +8,33 @@ public class Ex003 {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Insira um número");
-		int saldoMedio = sc.nextInt();
-		int percentual;
-		
-		if(saldoMedio <=500) {
-			System.out.println("Nenhum crédito");
-		}else if((saldoMedio >= 501) && (saldoMedio <= 1000)) {
-			percentual = (30 * 100) / saldoMedio;
-			System.out.println(percentual + " Equivale a 30% do valor do saldo médio");
-		}else if((saldoMedio >= 1001) && (saldoMedio <= 3000)) {
-			percentual = (40 * 100) / saldoMedio;
-			System.out.println(percentual + " Equivale a 40% do valor do saldo médio");
-		}else {
-			percentual = (50 * 100) / saldoMedio;
-			System.out.println(percentual + " Equivale a 50% do valor do saldo médio");
+
+		System.out.print("Informe seu saldo: ");
+		double saldoAtual = sc.nextDouble();
+
+		System.out.printf("\nSaldo médio: %.2f", saldoAtual);
+
+		double saldoAtualizado = 0;
+		double valorCredito = 0;
+
+		if (saldoAtual > 500 && saldoAtual <= 1000) {
+			saldoAtualizado = saldoAtual * 1.30;
+			valorCredito = saldoAtualizado - saldoAtual;
+			System.out.printf("\nSaldo com crédito: %.2f", saldoAtualizado);
+		} else if (saldoAtual >= 1001 && saldoAtual <= 3000) {
+			saldoAtualizado = saldoAtual * 1.40;
+			valorCredito = saldoAtualizado - saldoAtual;
+			System.out.printf("\nSaldo com crédito: %.2f", saldoAtualizado);
+		} else if (saldoAtual >= 3001) {
+			saldoAtualizado = saldoAtual * 1.50;
+			valorCredito = saldoAtualizado - saldoAtual;
+			System.out.printf("\nSaldo com crédito: %.2f", saldoAtualizado);
+		} else {
+			System.out.println("\nNenhum crédito");
 		}
-		
+
+		System.out.printf("\nValor crédito %.2f", valorCredito);
+
 		sc.close();
 
 	}

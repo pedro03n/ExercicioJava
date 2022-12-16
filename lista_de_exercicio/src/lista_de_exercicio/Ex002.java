@@ -11,12 +11,12 @@ public class Ex002 {
 		 System.out.println("Insira um número: ");
 		 int numero = sc.nextInt();
 		 
-		 if((numero %2 ==0)) {
+		 if(numero %2 ==0 && numero %5 == 0 &&  numero %10 ==0) {
+			 System.out.println("Número divisivel por 2, 5 e 10");
+		 }else if(numero %2 ==0) {
 			 System.out.println("Número divisivel por 2");
 		 }else if(numero %5 ==0) {
 			 System.out.println("Número divisivel por 5");
-		 }else if(numero %10 ==0) {
-			 System.out.println("Número divisivel por 10");
 		 }else {
 			 System.out.println("Não é divisível por nenhum deles");
 		 }
